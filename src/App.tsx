@@ -33,6 +33,7 @@ import { BreakHistory } from './components/BreakHistory';
 import { CharacterCustomizerModal } from './components/CharacterCustomizerModal';
 import { CustomCursor } from './components/CustomCursor';
 import { Footer } from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 const TARGET_PRESETS = [
   { mins: 0, label: 'Free Vibe' },
@@ -1093,6 +1094,9 @@ export default function App() {
         theme={theme}
         onToggleTheme={handleToggleTheme}
       />
+      
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
